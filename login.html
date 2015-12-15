@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>JobFinds | Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+	<!-- Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/kickstart.js"></script>
+	<script type="text/javascript" src="searchJobResult.js"></script>
+	<script type="text/javascript" src="validation.js"></script>
+	<script type="text/javascript" src="external_JS.js"></script>
+</head>
+<body>
+<div id="container" class="grid">
+	<header>
+
+		<div id="gallery">
+			<p id="banner-logo"><a href="index.php">
+				<span id="cs">cs</span>
+				<span id="Job">Job</span>
+				<span id="land">Land</span>
+				</a></p>
+			<div id="img1">
+				<img src="images/bforoura.jpg">
+			</div>
+			<div id="img2">
+				<img src="images/swei.jpg">
+
+			</div>
+			<div id="img3">
+				<img src="images/ggrevera.jpg">
+
+			</div>
+			<div id="img4">
+				<img src="images/mkrueger.jpg">
+
+			</div>
+			<div id="img5">
+				<img src="images/hchu.jpg">
+
+			</div>
+		</div>
+	</header>
+
+<div class="col_12 column">
+		<!-- Menu Horizontal -->
+		<ul class="menu">
+			<li ><a href="index.php"><i class="icon-home"></i> Home</a></li>
+			<!--<li><a href="jobs.php"><i class="icon-desktop"></i> Browse Jobs</a></li>-->
+			<li><a href="SeekerReg.php"><i class="icon-user"></i> Job Seeker Register</a></li>
+			<li><a href="employerRegistr.php"><i class="icon-user"></i> Employer Register</a></li>
+			<li class="current"><a href="login.html"><i class="icon-key"></i> Login</a></li>
+		</ul>
+	</div>
+  
+  <!--<body>-->
+    <!--javascript code-->
+    <!--<script type="text/javascript" src="external_JS.js"></script>-->
+    <!--creating an HTML form for the login page with input fields, text fields, and submit button:-->
+   
+	   <!--creating a center table-->
+  <div class="col_12 column">
+    <form name= 'check' method='post' action='login.php' onsubmit="return emailValidation()">
+        <fieldset>
+            <legend>Login Page</legend>
+            <p>
+                <label for="email">Email:</label>
+                <input id="uname" name="uname" type="text" />
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input id="pass" name="pass" type="password" />
+            </p>
+              <p>
+                <label for="type">User Types:</label>
+                <select name="usertype" id="usertype"required>
+                 <option>Employer</option>
+                 <option>JobSeeker</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" name='login' value="login" />
+        </fieldset>
+    </form>
+  
+</div> 
+	
+<footer>
+		
+        <div class="container_footer">
+        	<hr/>
+		<ul class="ss-share">
+			<li class="ss-share-item">
+				<a class="ss-share-link ico-facebook" href="http://www.facebook.com/sharer.php?" rel="nofollow" target="_blank">Share on Facebook</a>
+			</li>
+			<li class="ss-share-item">
+				<a class="ss-share-link ico-twitter" href="http://twitter.com/share?" rel="nofollow" target="_blank">Share on Twitter</a>
+			</li>
+			<li class="ss-share-item">
+				<a class="ss-share-link ico-google" href="http://plus.google.com/share?" rel="nofollow" target="_blank">Share on Google+</a>
+			</li>
+		</ul>
+		&nbsp;
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span> 
+			<script type="text/javascript">
+			<!--
+				var currentTime = new Date()
+				var month = currentTime.getMonth() + 1
+				var day = currentTime.getDate()
+				var year = currentTime.getFullYear()
+				document.write(month + "/" + day + "/" + year)
+				-->
+			</script>
+		</span>
+		<span>   
+			<script type="text/javascript">
+			<!--
+				var currentTime = new Date()
+				var hours = currentTime.getHours()
+				var minutes = currentTime.getMinutes()
+				
+				if (minutes < 10)	{
+					minutes = "0" + minutes
+				}
+				document.write(hours + ":" + minutes + " ")
+							
+				if (hours > 11)	{
+				document.write("PM")
+				} 
+				else {
+				document.write("AM")
+				}
+			-->
+			</script>
+		</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Copyright @2015, CS JobLand, All Rights Reserved</span>	
+        </div>		
+</footer>
+  </body>
+</html>

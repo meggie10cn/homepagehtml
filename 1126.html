@@ -1,0 +1,98 @@
+<?php
+    elseif ($keyword!=NULL && $state_select!=NULL && $category_select==NULL) {
+  $query = "SELECT job.jid as id, types.t_name as name,types.color as color, job.title as title, job.company_name as company,
+job.description as description, job.city as city,
+job.state as state, job.post_date as created FROM job,types, categories where job.type_id = types.tid
+  and state = '$state_select' and (title LIKE '%$keyword%' or description LIKE '%$keyword%') GROUP BY id ORDER BY created desc";
+  $result = mysql_query($query);
+   if ($result!=""){
+      while ($jobs = mysql_fetch_assoc($result)) {?>
+
+    <li>
+        <div class="type">
+            <span style="background:<?php echo $jobs['color']; ?>"><?php echo $jobs['name']; ?></span>
+        </div>
+        <div class="description">
+            <a href="details.php"><h5 id="<?php echo $jobs['id']; ?>"><?php echo $jobs['title']; ?></a>
+                    (<?php echo $jobs['city']; ?>, <?php echo $jobs['state']; ?>)</h5>
+          <span id="list_date">
+            <?php echo date($jobs['created']); ?>
+          </span>
+                <?php echo myTruncate($jobs['description'], 200, " "); ?>
+        </div>
+    </li>
+    <?php
+       } // end while
+     } // end if
+     else {?>
+        <li><img src="images/noresults.jpg"></li>
+
+    <?php  } 
+  
+     mysql_free_result($result);  }?> <?php
+
+     elseif ($keyword!=NULL && $state_select==NULL && $category_select!=NULL) {
+  $query = "SELECT job.jid as id, types.t_name as name,types.color as color, job.title as title, job.company_name as company,
+job.description as description, job.city as city,
+job.state as state, job.post_date as created FROM job,types, categories where job.type_id = types.tid
+  and job.cid = '$category_select' and (title LIKE '%$keyword%' or description LIKE '%$keyword%') GROUP BY id ORDER BY created desc";
+  $result = mysql_query($query);
+     if ($result!=""){
+      while ($jobs = mysql_fetch_assoc($result)) {?>
+
+    <li>
+        <div class="type">
+            <span style="background:<?php echo $jobs['color']; ?>"><?php echo $jobs['name']; ?></span>
+        </div>
+        <div class="description">
+            <a href="details.php"><h5 id="<?php echo $jobs['id']; ?>"><?php echo $jobs['title']; ?></a>
+                    (<?php echo $jobs['city']; ?>, <?php echo $jobs['state']; ?>)</h5>
+          <span id="list_date">
+            <?php echo date($jobs['created']); ?>
+          </span>
+                <?php echo myTruncate($jobs['description'], 200, " "); ?>
+        </div>
+    </li>
+    <?php
+       } // end while
+     } // end if
+     else {?>
+        <li><img src="images/noresults.jpg"></li>
+
+    <?php  } 
+
+    mysql_free_result($result);  }?>
+
+   <?php
+    // if $keyword is null, other two have values
+  elseif ($keyword==NULL && $state_select!=NULL && $category_select!=NULL) {
+//elseif ($keyword =="" && $state_select!=NULL && $category_select!=NULL) {
+ $query = "SELECT job.jid as id, types.t_name as name,types.color as color, job.title as title, job.company_name as company,
+job.description as description, job.city as city,
+job.state as state, job.post_date as created FROM job,types, categories where job.type_id = types.tid
+  and state = '$state_select' and job.cid = '$category_select' GROUP BY id ORDER BY created desc";
+  $result = mysql_query($query);
+   if ($result!=""){
+      while ($jobs = mysql_fetch_assoc($result)) {?>
+
+    <li>
+        <div class="type">
+            <span style="background:<?php echo $jobs['color']; ?>"><?php echo $jobs['name']; ?></span>
+        </div>
+        <div class="description">
+            <a href="details.php"><h5 id="<?php echo $jobs['id']; ?>"><?php echo $jobs['title']; ?></a>
+                    (<?php echo $jobs['city']; ?>, <?php echo $jobs['state']; ?>)</h5>
+          <span id="list_date">
+            <?php echo date($jobs['created']); ?>
+          </span>
+                <?php echo myTruncate($jobs['description'], 200, " "); ?>
+        </div>
+    </li>
+    <?php
+       } // end while
+     } // end if
+     else {?>
+        <li><img src="images/noresults.jpg"></li>
+
+    <?php  } 
+     mysql_free_result($result);  }?>
