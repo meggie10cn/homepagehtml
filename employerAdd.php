@@ -21,8 +21,8 @@ it is action to employerJobList.php
 			<select id="type_selected" name="type_selected">
 			<!---<option value ="">Select Type</option>-->
 			<?php
-			 $conn = mysql_connect("localhost", "root", "root" );
-	         mysql_select_db("IADFINAL");
+			  $conn = mysql_connect("localhost", "user21", "6k1kTPLe");
+	           mysql_select_db("user21db");
 
 		//*** execute the query
               $sql = "SELECT * FROM types";
@@ -40,8 +40,8 @@ it is action to employerJobList.php
 		<td><select id="category_selected" name="category_selected">
 			<!--<option value ="">Select Category</option>-->
 			<?php
-			 $conn = mysql_connect("localhost", "root", "root" );
-	         mysql_select_db("IADFINAL");
+			 $conn = mysql_connect("localhost", "user21", "6k1kTPLe");
+	         mysql_select_db("user21db");
 
 		//*** execute the query
               $sql = "SELECT * FROM categories";
@@ -146,8 +146,8 @@ it is action to employerJobList.php
 
 if (isset($_POST['submit']))
 	{	
-	$conn = mysql_connect("localhost", "root", "root" );
-	mysql_select_db("IADFINAL");   
+	 $conn = mysql_connect("localhost", "user21", "6k1kTPLe");
+	 mysql_select_db("user21db");  
 	
 	                $company_name=$_POST['company_name'] ;
 			 		$title=$_POST['title'] ;

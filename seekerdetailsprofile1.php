@@ -17,9 +17,9 @@ if (isset($_SESSION['valid_user'])){
    $pid = isset($_GET['id'])?(int)$_GET['id']: null;
 
             $dbhost = 'localhost';
-             $dbuser  = "root";
-             $dbpass  = "root";
-              $dbname  = "IADFINAL";
+             $dbuser  = "user21";
+             $dbpass  = "6k1kTPLe";
+              $dbname  = "user21db";
 
     //*** create a connection object
     $conn = mysql_connect($dbhost, $dbuser, $dbpass)

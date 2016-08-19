@@ -13,8 +13,8 @@ if (isset($_SESSION['valid_user'])){
 <?php include("employernavigator.php");?>
 <div id = "myDiv" class="col_12 column">
 <?php
-$conn = mysql_connect("localhost", "root", "root" );
-	mysql_select_db("IADFINAL");
+$conn = mysql_connect("localhost", "user21", "6k1kTPLe" );
+	mysql_select_db("user21db");
 
 //$id =$_REQUEST['jid'];
 $id = isset($_GET['id'])?(int)$_GET['id']: null;

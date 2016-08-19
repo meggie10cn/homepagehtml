@@ -43,9 +43,10 @@
        // $dbname  = "user21db";
 
         $dbhost = 'localhost';
-        $dbuser  = "root";
-        $dbpass  = "root";
-        $dbname  = "IADFINAL";
+        $dbuser  = "user21";
+        $dbpass  = "6k1kTPLe";
+        $dbname  = "user21db";
+    
 
 		//*** create a connection object
 		

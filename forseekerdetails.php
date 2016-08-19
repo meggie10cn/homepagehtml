@@ -4,8 +4,8 @@
 
 if (isset($_SESSION['valid_user'])){
  $user=$_SESSION['valid_user'];
- $conn = mysql_connect("localhost", "root", "root" );
- mysql_select_db("IADFINAL");
+ $conn = mysql_connect("localhost", "user21", "6k1kTPLe");
+ mysql_select_db("user21db");
  $q="SELECT * FROM seeker where email ='$user'";
  $r = mysql_query($q);
 $seeker=mysql_fetch_assoc($r);
@@ -21,7 +21,7 @@ $sid= $_SESSION['seeker_id'];
 <?php
 /**
  * Created by PhpStorm.
- * User: maggie
+ * User: maggie Zhao
  * Date: 11/18/15
  * Time: 2:48 PM
  */

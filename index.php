@@ -2,7 +2,7 @@
 <?php include ("header.php"); ?>
 <?php include("navigator.php");?>
 <?php include("jobsearchbox.php");?>
-<?php require ("conn.php");?>
+
    
 	
 	<div id = "myDiv" class="col_12 column">

@@ -3,15 +3,15 @@
     <?php
 /**
  * Created by PhpStorm.
- * User: maggie
+ * User: meggie zhao
  * Date: 11/17/15
  * Time: 2:28 PM
  */
 //*** create a connection object
 $dbhost = 'localhost';
-$dbuser  = "root";
-$dbpass  = "root";
-$dbname  = "IADFINAL";
+$dbuser  = "user21";
+$dbpass  = "6k1kTPLe";
+$dbname  = "user21db";
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass)
 or die (mysql_error());

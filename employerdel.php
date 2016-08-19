@@ -13,8 +13,8 @@ if (isset($_SESSION['valid_user'])){
 <div class="col_12 column">
 <form class="deletejobs" method = "post" action="employerJobList.php" >
 <?php
-$conn = mysql_connect("localhost", "root", "root" );
-	mysql_select_db("IADFINAL");
+$conn = mysql_connect("localhost", "user21", "6k1kTPLe" );
+	mysql_select_db("user21db");
 
 $id = isset($_GET['id'])?(int)$_GET['id']: null;
 $r = "SELECT * FROM job Where jid='$id'";

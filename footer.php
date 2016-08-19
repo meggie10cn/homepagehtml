@@ -45,8 +45,8 @@
 				}
 			-->
 			</script>
-		</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Copyright @2015, CS JobLand, All Rights Reserved</span>
-		<p>Team Project: Lixia Zhao, Shanshan Jiang, Edith Castro Granja,Xueyu Zhang, Zackline Mendy</p>	
+		</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="finalreport.pdf">Copyright @2015, CS JobLand, All Rights Reserved</a></span>
+		<p><a href="ranking.html">Team Project:</a> Lixia Zhao, Shanshan Jiang, Edith Castro Granja,Xueyu Zhang, Zackline Mendy</p>	
         </div>		
 </footer>
 </div> <!-- End Grid -->

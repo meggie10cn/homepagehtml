@@ -1,4 +1,3 @@
-
 <div id="search_area" class="col_12 column">
 		<form class="horizontal" name = "myForm" action="Result.php" method = "POST">
 			<input name = "keywords" id="keywords" type="text" placeholder="Enter Keywords..." />
@@ -60,10 +59,9 @@
 			<option value ="">Select Category</option>
 			<?php
 			  $dbhost = 'localhost';
-             $dbuser  = "root";
-             $dbpass  = "root";
-              $dbname  = "IADFINAL";
-
+             $dbuser  = "user21";
+             $dbpass  = "6k1kTPLe";
+              $dbname  = "user21db";
 		//*** create a connection object
 		$conn = mysql_connect($dbhost, $dbuser, $dbpass)
 				or die (mysql_error());

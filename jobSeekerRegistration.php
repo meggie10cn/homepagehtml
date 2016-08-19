@@ -1,7 +1,7 @@
 <?php
 	//DB connection with all information set on Webtech server
-	$conn = mysql_connect("localhost", "user12", "csZmhcXs" );
-	mysql_select_db("user12db");
+	$conn = mysql_connect("localhost", "user21", "6k1kTPLe");
+	mysql_select_db("user21db");
 	//checking if the form is submitted or not. 
 	if(!isset($_POST['submit'])){
 		echo "<script> window.open('jobSeekerRegistration.html','_self')</script>";

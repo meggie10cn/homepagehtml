@@ -2,9 +2,9 @@
 	//DB connection with all information set on Webtech server
     // Nov. 25/16 change the php file name and Cofirmationemail.php
   $dbhost = 'localhost';
-  $dbuser  = "root";
-  $dbpass  = "root";
-  $dbname  = "IADFINAL";
+  $dbuser  = "user21";
+  $dbpass  = "6k1kTPLe";
+  $dbname  = "user21db";
 
 //*** create a connection object
   $conn = mysql_connect($dbhost, $dbuser, $dbpass)

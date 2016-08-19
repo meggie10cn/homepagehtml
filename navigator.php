@@ -6,6 +6,6 @@
 			<!--<li><a href="jobs.php"><i class="icon-desktop"></i> Browse Jobs</a></li>-->
 			<li><a href="SeekerReg.php"><i class="icon-user"></i> Job Seeker Register</a></li>
 			<li><a href="employerRegistr.php"><i class="icon-user"></i> Employer Register</a></li>
-			<li><a href="login.php"><i class="icon-key"></i> Login</a></li>
+			<li><a href="login.html"><i class="icon-key"></i> Login</a></li>
 		</ul>
-	</div>4
+	</div>

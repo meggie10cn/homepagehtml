@@ -1,22 +1,22 @@
 <?php
 	//DB connection with all information set on Webtech server
-	$conn = mysql_connect("localhost", "root", "root" );
-	mysql_select_db("IADFINAL");
+	        $dbhost = "localhost";
+            $dbuser="user21";
+	        $dbpass="6k1kTPLe";
+	        $dbname="user21db";
+
+		//*** create a connection object
+		$conn = mysql_connect($dbhost, $dbuser, $dbpass)
+				or die (mysql_error());
+
+		mysql_select_db($dbname)
+				or die (mysql_error());
 	//*** do this when form is submitted
-	if(!isset($_POST['login'])){
-		echo "<script> window.open('login.html','_self')</script>";
-		exit(); //*** exit the login page
-	}
+	
 	$user = $_POST['uname'];
     $passwd = $_POST['pass'];
 	$utype = $_POST['usertype'];
 	//if empty loop to the login page. Validation check 
-	if($user==''){
-	   //header("location: login.html");
-	   echo "<script> alert('Please enter your user name.')</script>";
-	   header("location: login.html");
-	   exit(); //*** exit the login page
-	}
 	//db query 
        
     if ($utype == "JobSeeker") {
@@ -27,11 +27,11 @@
 	    if(mysql_num_rows($run)==1){
 	       session_start(); //*** start a new session
 	       $_SESSION['valid_user'] = $user; //***set a session variable
-	       echo "<script> window.open('Jobseekerprofile.php','_self')</script>";
+	       header("location:Jobseekerprofile.php");
 	    
 		}else{
-	       header("location: login.html");
-	       echo "<script> alert('Sorry! The email is not valid. Please enter a valid email address.')</script>";
+			header("location: login.html");
+	       echo "<script> alert('Sorry! The email or username is not valid. ')</script>";
         } 
 	}
 	else if ($utype == "Employer") {
@@ -42,11 +42,11 @@
 	         if(mysql_num_rows($run)==1){
 	            session_start(); //*** start a new session
 	            $_SESSION['valid_user'] = $user; //***set a session variable
-	            echo "<script> window.open('employerJobList.php','_self')</script>";
+	            header("location:employerJobList.php");
 	         }//if the email is not a valid one, redirect to the login.html page
 	         else{
 	             header("location: login.html");
-	             echo "<script> alert('Sorry! The email is not valid. Please enter a valid email address.')</script>";
+	             echo "<script> alert('Sorry! The email or username is not valid. ')</script>";
 	         }
     }
 mysql_close($conn); //close the db connection

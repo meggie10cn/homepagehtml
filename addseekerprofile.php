@@ -6,49 +6,8 @@
     <input type="submit" value="Upload Image" name="submit">
 </form>-->
 
-<?php
-$error = "";
-if (isset($_FILES["file"])) {
-	$allowedExts = array("doc", "docx", "pdf", "odt");
-	$temp = explode(".", $_FILES["file"]["name"]);
-	$extension = end($temp);
- 
-	if ($_FILES["file"]["error"] > 0) {
-		$error .= "Error opening the file<br />";
-	}
-	if ( $_FILES["file"]["type"] != "application/pdf" &&
-			$_FILES["file"]["type"] != "application/vnd.openxmlformats-officedocument.wordprocessingml.document" &&
-			$_FILES["file"]["type"] != "application/msword" &&
-			$_FILES["file"]["type"] != "application/vnd.oasis.opendocument.text") {	
-		$error .= "Mime type not allowed<br />";
-	}
-	if (!in_array($extension, $allowedExts)) {
-		$error .= "Extension not allowed<br />";
-	}
-	if ($_FILES["file"]["size"] > 102400) {
-		$error .= "File size shoud be less than 100 kB<br />";
-	}
- 
-	if ($error == "") {
-		echo "uploaded successfully";
-	} else {
-		echo $error;
-	}
-}	
-?>
- 
-<form name= "uploadfile" action="addseekerprofile.php" method="post" enctype="multipart/form-data">
-	<label for="file">Filename:</label>
-	<input type="file" name="file" id="file" /><br />
-	<input type="submit" name="submit" value="Submit" />
-</form>
- <?php
-if ($_FILES['file']['error'] == UPLOAD_ERR_OK               //checks for errors
-      && is_uploaded_file($_FILES['file']['tmp_name'])) { //checks that file is uploaded
-  echo file_get_contents($_FILES['file']['tmp_name']); 
-} ?>
 <div align="center">
-<h6> Or Fill in the Form If You Do not Choose to Upload Your Resume</h6>
+<h6> Fill in the Form </h6>
 </div>
 <form name = "profileAdd" id="profileAdd" method="post"  >
 <table>
@@ -119,9 +78,9 @@ if ($_FILES['file']['error'] == UPLOAD_ERR_OK               //checks for errors
 if (isset($_POST['submit']))
 {	  
      $dbhost = 'localhost';
-     $dbuser='root';
-	 $dbpass='root';
-	 $dbname='IADFINAL';
+     $dbuser='user21';
+	 $dbpass='6k1kTPLe';
+	 $dbname='user21db';
 	 $conn = mysql_connect($dbhost, $dbuser, $dbpass)
 				or die (mysql_error());
 
